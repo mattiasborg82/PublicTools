@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "id": "connection-string-password",
+      "category": "credential",
+      "severity": "high",
+      "engine": "regex",
+      "pattern": "(password|pwd)\\s*=\\s*[^;\\r\\n]+",
+      "description": "Possible password in a connection string"
+    },
+    {
+      "id": "connection-string-user",
+      "category": "credential",
+      "severity": "medium",
+      "engine": "regex",
+      "pattern": "(user id|uid)\\s*=\\s*[^;\\r\\n]+",
+      "description": "Possible user name in a connection string"
+    },
+    {
+      "id": "bearer-token",
+      "category": "token",
+      "severity": "high",
+      "engine": "regex",
+      "pattern": "bearer\\s+[A-Za-z0-9\\-\\._~\\+/=]+",
+      "description": "Possible bearer token"
+    },
+    {
+      "id": "jwt-token",
+      "category": "token",
+      "severity": "high",
+      "engine": "regex",
+      "pattern": "eyJ[A-Za-z0-9_-]+\\.[A-Za-z0-9_-]+\\.[A-Za-z0-9_-]+",
+      "description": "Possible JWT token"
+    },
+    {
+      "id": "azure-storage-connection-string",
+      "category": "cloud-secret",
+      "severity": "high",
+      "engine": "regex",
+      "pattern": "DefaultEndpointsProtocol=https;AccountName=[A-Za-z0-9\\-]{3,24};AccountKey=[A-Za-z0-9+/=]{40,};EndpointSuffix=core\\.windows\\.net",
+      "description": "Possible Azure Storage connection string"
+    },
+    {
+      "id": "azure-storage-account-key",
+      "category": "cloud-secret",
+      "severity": "high",
+      "engine": "regex",
+      "pattern": "(?i)(accountkey|azurestoragekey)\\s*[:=]\\s*[\"']?[A-Za-z0-9+/=]{40,}[\"']?",
+      "description": "Possible Azure Storage account key"
+    },
+    {
+      "id": "azure-sas-token",
+      "category": "cloud-secret",
+      "severity": "high",
+      "engine": "regex",
+      "pattern": "(?i)sv=[0-9\\-]{8,16}&ss=[a-z]+&srt=[a-z]+&sp=[rwdlacupitfx]+&se=[^&\\s]+&st=[^&\\s]+&spr=https?(?:,https)?&sig=[A-Za-z0-9%/+\\-=]{20,}",
+      "description": "Possible Azure SAS token"
+    },
+    {
+      "id": "entra-tenant-id",
+      "category": "cloud-identifier",
+      "severity": "medium",
+      "engine": "regex",
+      "pattern": "(?i)(tenantid|tenant_id)\\s*[:=]\\s*[\"']?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}[\"']?",
+      "description": "Possible Entra tenant ID"
+    },
+    {
+      "id": "entra-client-id",
+      "category": "cloud-identifier",
+      "severity": "medium",
+      "engine": "regex",
+      "pattern": "(?i)(clientid|client_id|applicationid|app_id)\\s*[:=]\\s*[\"']?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}[\"']?",
+      "description": "Possible Entra client or application ID"
+    },
+    {
+      "id": "entra-client-secret",
+      "category": "cloud-secret",
+      "severity": "high",
+      "engine": "regex",
+      "pattern": "(?i)(clientsecret|client_secret|appsecret|applicationsecret)\\s*[:=]\\s*[\"']?[A-Za-z0-9_\\-~\\.]{16,128}[\"']?",
+      "description": "Possible Entra client secret"
+    },
+    {
+      "id": "aws-access-key-id",
+      "category": "cloud-secret",
+      "severity": "high",
+      "engine": "regex",
+      "pattern": "\\b(?:AKIA|ASIA|ABIA|ACCA|AIDA|AGPA|AIPA|ANPA|ANVA|APKA|AROA|A3T[A-Z0-9])[A-Z0-9]{16}\\b",
+      "description": "Possible AWS access key ID"
+    },
+    {
+      "id": "aws-secret-access-key",
+      "category": "cloud-secret",
+      "severity": "high",
+      "engine": "regex",
+      "pattern": "(?i)(aws_secret_access_key|secretaccesskey|awssecretkey)\\s*[:=]\\s*[\"']?[A-Za-z0-9/+=]{40}[\"']?",
+      "description": "Possible AWS secret access key"
+    },
+    {
+      "id": "aws-session-token",
+      "category": "cloud-secret",
+      "severity": "high",
+      "engine": "regex",
+      "pattern": "(?i)(aws_session_token|sessiontoken)\\s*[:=]\\s*[\"']?[A-Za-z0-9/+=]{80,}[\"']?",
+      "description": "Possible AWS session token"
+    },
+    {
+      "id": "aws-account-id",
+      "category": "cloud-identifier",
+      "severity": "medium",
+      "engine": "regex",
+      "pattern": "(?i)(aws_account_id|accountid)\\s*[:=]\\s*[\"']?\\d{12}[\"']?",
+      "description": "Possible AWS account ID"
+    },
+    {
+      "id": "gcp-service-account-json-private-key",
+      "category": "cloud-secret",
+      "severity": "high",
+      "engine": "regex",
+      "pattern": "\"private_key\"\\s*:\\s*\"-----BEGIN PRIVATE KEY-----",
+      "description": "Possible GCP service account private key"
+    },
+    {
+      "id": "gcp-service-account-client-email",
+      "category": "cloud-identifier",
+      "severity": "medium",
+      "engine": "regex",
+      "pattern": "\"client_email\"\\s*:\\s*\"[^\"]+@[^\"\\s]+\\.iam\\.gserviceaccount\\.com\"",
+      "description": "Possible GCP service account email"
+    },
+    {
+      "id": "gcp-api-key",
+      "category": "cloud-secret",
+      "severity": "high",
+      "engine": "regex",
+      "pattern": "\\bAIza[0-9A-Za-z\\-_]{35}\\b",
+      "description": "Possible GCP API key"
+    },
+    {
+      "id": "gcp-project-id",
+      "category": "cloud-identifier",
+      "severity": "medium",
+      "engine": "regex",
+      "pattern": "(?i)(projectid|project_id)\\s*[:=]\\s*[\"']?[a-z][a-z0-9\\-]{4,30}[\"']?",
+      "description": "Possible GCP project ID"
+    }
+  ]
+}

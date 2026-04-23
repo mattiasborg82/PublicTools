@@ -1,0 +1,11 @@
+C:\Users\MattiasBorg\OneDrive - Onevinn\DEV\DotNetSecretScanner\DotNetSecretScanner.Cli\bin\Release\net8.0\win-x64\publish\NetCodeSecrets.exe
+C:\Users\MattiasBorg\OneDrive - Onevinn\DEV\DotNetSecretScanner\DotNetSecretScanner.Cli\bin\Release\net8.0\win-x64\publish\NetCodeSecrets.dll
+C:\Users\MattiasBorg\OneDrive - Onevinn\DEV\DotNetSecretScanner\DotNetSecretScanner.Cli\bin\Release\net8.0\win-x64\publish\NetCodeSecrets.deps.json
+C:\Users\MattiasBorg\OneDrive - Onevinn\DEV\DotNetSecretScanner\DotNetSecretScanner.Cli\bin\Release\net8.0\win-x64\publish\NetCodeSecrets.runtimeconfig.json
+C:\Users\MattiasBorg\OneDrive - Onevinn\DEV\DotNetSecretScanner\DotNetSecretScanner.Cli\bin\Release\net8.0\win-x64\publish\NetCodeSecrets.pdb
+C:\Users\MattiasBorg\OneDrive - Onevinn\DEV\DotNetSecretScanner\DotNetSecretScanner.Cli\bin\Release\net8.0\win-x64\publish\ICSharpCode.Decompiler.dll
+C:\Users\MattiasBorg\OneDrive - Onevinn\DEV\DotNetSecretScanner\DotNetSecretScanner.Cli\bin\Release\net8.0\win-x64\publish\Microsoft.Web.Administration.dll
+C:\Users\MattiasBorg\OneDrive - Onevinn\DEV\DotNetSecretScanner\DotNetSecretScanner.Cli\bin\Release\net8.0\win-x64\publish\System.Collections.Immutable.dll
+C:\Users\MattiasBorg\OneDrive - Onevinn\DEV\DotNetSecretScanner\DotNetSecretScanner.Cli\bin\Release\net8.0\win-x64\publish\System.Reflection.Metadata.dll
+C:\Users\MattiasBorg\OneDrive - Onevinn\DEV\DotNetSecretScanner\DotNetSecretScanner.Cli\bin\Release\net8.0\win-x64\publish\runtimes\unix\lib\netstandard1.5\System.ServiceProcess.ServiceController.dll
+C:\Users\MattiasBorg\OneDrive - Onevinn\DEV\DotNetSecretScanner\DotNetSecretScanner.Cli\bin\Release\net8.0\win-x64\publish\runtimes\win\lib\netstandard1.5\System.ServiceProcess.ServiceController.dll

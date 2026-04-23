@@ -1,0 +1,2 @@
+C:\Users\MattiasBorg\OneDrive - Onevinn\DEV\DotNetSecretScanner\DotNetSecretScanner.Cli\DotNetSecretScanner.Cli\bin\Release\NetCodeSecrets.pdb
+C:\Users\MattiasBorg\OneDrive - Onevinn\DEV\DotNetSecretScanner\DotNetSecretScanner.Cli\DotNetSecretScanner.Cli\bin\Release\NetCodeSecrets.exe
